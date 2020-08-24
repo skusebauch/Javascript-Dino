@@ -1,5 +1,5 @@
 // Create Dino Constructor
-function Dino(species, weight, height, diet, where, when, fact, image) {
+function Dino(species, weight, height, diet, where, when, fact) {
   this.species = species;
   this.weight = weight;
   this.height = height;
@@ -7,7 +7,6 @@ function Dino(species, weight, height, diet, where, when, fact, image) {
   this.where = where;
   this.when = when;
   this.fact = fact;
-  this.image = image;
 }
 
 // Create Dino Objects
@@ -88,8 +87,23 @@ let pigeon = new Dino(
   "pigeon.png"
 );
 
-// Create Human Object
+// want to fetch these datas
+// fetch("dino.json")
+//  .then((response) => response.json())
+//  .then((data) => {
+//    let triceratops = new Dino(
+//      data.Dinos[0].species,
+//      data.Dinos[0].weight,
+//      data.Dinos[0].height,
+//      data.Dinos[0].diet,
+//      data.Dinos[0].where,
+//      data.Dinos[0].when,
+//      data.Dinos[0].fact
+//    );
+//  });
 
+// Create Human Object
+let human = new Dino();
 // Use IIFE to get human data from form
 
 // Create Dino Compare Method 1
