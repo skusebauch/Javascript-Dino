@@ -36,17 +36,58 @@ let human = new Creature({});
   human.when = "current Time";
   human.fact = "Humans needs to learn code";
   human.image = "human.png";
+  return human;
 })();
 
 // Create Dino Compare Method 1 - Height
 // NOTE: translated in KG and meters/centimeters
-//function compareHeight(objectDino, objectHuman) {}
 
-// Create Dino Compare Method 2 - Weight
+const compareHeight = () => {
+  dinosaurs.forEach((dino) => {
+    if (human.height < dino.height) {
+      return `The ${dino.species} weights ${
+        dino.height - human.height
+      } kg more than you!`;
+    } else if (human.height === dino.height) {
+      return `${human.name} has the same height as ${dino.species}`;
+    } else {
+      return `${human.name} has ${human.weigth - dino.height} more kg!`;
+    }
+  });
+};
+
+// Create Dino Compare Method 2 - weight
 // NOTE: translated in KG and meters/centimeters
+
+const compareWeight = () => {
+  dinosaurs.forEach((dino) => {
+    if (human.weight < dino.weight) {
+      return `The ${dino.species} weighs ${
+        dino.weight - human.weight
+      } kg more than you!`;
+    } else if (human.weight === dino.weight) {
+      return `${human.name} has the same weight as ${dino.species}`;
+    } else {
+      return `${human.name} has ${human.weigth - dino.weight} more kg`;
+    }
+  });
+};
 
 // Create Dino Compare Method 3 - Diet
 // NOTE: translated in KG and meters/centimeters
+const compareDiet = () => {
+  dinosaurs.forEach((dino) => {
+    if (human.diet < dino.diet) {
+      return `The ${dino.species} weighs ${
+        dino.diet - human.diet
+      } kg more than you!`;
+    } else if (human.diet === dino.diet) {
+      return `${human.name} has the same diet as ${dino.species}`;
+    } else {
+      return `${human.name} has ${human.diet - dino.diet} more kg`;
+    }
+  });
+};
 
 // Generate Tiles for each Dino in Array
 
